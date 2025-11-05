@@ -39,6 +39,6 @@ public class Patient {
     private OffsetDateTime updatedAt = OffsetDateTime.now();
 
     public enum Gender {
-        MALE, FEMALE, OTHER
+        MALE, FEMALE
     }
 }

@@ -1,4 +1,4 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8081';
 
 // FIX: The 'export' keyword MUST be here
 export interface Patient {
@@ -42,7 +42,7 @@ async function fetchApi<T>(path: string, options?: RequestInit): Promise<T> {
   }
 
   const text = await response.text();
-  // Return the parsed JSON if text exists, otherwise return an empty object 
+  // Return the parsed JSON if text exists, otherwise return an empty object
   // This handles DELETE requests that might not return a body
   return text ? JSON.parse(text) : ({} as T);
 }
